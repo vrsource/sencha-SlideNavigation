@@ -12,7 +12,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
         'Ext.Button',
         'Ext.Container',
         'Ext.Function',
-        'Ext.ModelManager',
+        'Ext.data.ModelManager',
         'Ext.Toolbar',
         'Ext.data.Model',
         'Ext.data.Store',
