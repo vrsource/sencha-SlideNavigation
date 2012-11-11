@@ -88,7 +88,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
          * of the container when "flicked".  By default the animation is disable on
          * Android.
          */
-        slideDuration: Ext.os.is.Android ? 0 : 100,
+        slideDuration: Ext.os.is.Android2 ? 0 : 100,
         
         /**
          * @cfg {Integer} selectSlideDuration Number of miliseconds to animate the sliding
@@ -96,7 +96,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
          * value here of 300 gives a much nicer feel.  By default the animation is disable on
          * Android.
          */
-        selectSlideDuration: Ext.os.is.Android ? 0 : 300,
+        selectSlideDuration: Ext.os.is.Android2 ? 0 : 300,
         
         /**
          * @cfg {Boolean} closeOnSelect Whether or not to automatically close the container
