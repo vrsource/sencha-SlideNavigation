@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SlideNavigationExample</title>
+    <link rel="stylesheet" href="resources/css/app.css" type="text/css"/>
+    <script type="text/javascript" src="sdk/sencha-touch-all.js"></script>
+        
+    <!-- Android debug -->
+    <!--<script src="http://10.0.2.2:8080/target/target-script-min.js#anonymous"></script>-->
+    
+    <style type="text/css">
+        /**
+         *  Example CSS for adding a drop shadow to the main container.
+         */
+        .x-slidenavigation-container.x-dragging,
+        .x-slidenavigation-container.open {
+            /**
+             *  The performance of this now seem acceptable.  If you
+             *  are experiencing a laggy sliding animation you can either
+             *   a) Turn off the slide animation (set duration to 0), or
+             *   b) Use the border-image method below
+             */
+             box-shadow: 0 0 4px 1px #999;
+             -webkit-box-shadow: 0 0 4px 1px #999;
+        }    
+    </style>
+        
+    <script type="text/javascript" src="app.js"></script>
+
+</head>
+<body>
+</body>
+</html>

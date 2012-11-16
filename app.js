@@ -28,7 +28,9 @@ Ext.application({
 
     launch: function() {
         // Destroy the #appLoadingIndicator element
-        Ext.fly('appLoadingIndicator').destroy();
+        if(Ext.fly('appLoadingIndicator')) {
+           Ext.fly('appLoadingIndicator').destroy();
+        }
 
         // Initialize the main view
         Ext.Viewport.add(Ext.create('SlideNavigationExample.view.Main'));
