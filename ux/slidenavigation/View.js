@@ -108,7 +108,17 @@ Ext.define('Ext.ux.slidenavigation.View', {
         * @cfg {Integer} autoSelectIndex Index of the item to auto select upon
         * initialization.  If null, then no auto selection will occur. Default is 0.
         */
-        autoSelectIndex: 0
+        autoSelectIndex: 0,
+
+        /**
+        * @cfg {Integer} containerZindex zindex to use for the container element.
+        */
+        containerZIndex: 5,
+
+        /**
+        * @cfg {Integer} navListZIndex  zindex to use for the navigation list.
+        */
+        navListZIndex: 2
     },
 
     initConfig: function() {
@@ -426,7 +436,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
             docked: 'left',
             cls: 'x-slidenavigation-list',
             style: 'position: absolute; top: 0; left: 0; height: 100%;' +
-                   'width: 100% !important; z-index: 2',
+                   'width: 100% !important; z-index: ' + this.getNavListZIndex(),
             listeners: {
                 select: this.onSelect,
                 scope: this
@@ -443,7 +453,8 @@ Ext.define('Ext.ux.slidenavigation.View', {
         return Ext.create('Ext.Container', Ext.merge({}, this.config.container, {
             docked: 'left',
             cls: 'x-slidenavigation-container',
-            style: 'width: 100%; height: 100%; position: absolute; opacity: 1; z-index: 5',
+            style: 'width: 100%; height: 100%; position: absolute;' +
+                   ' opacity: 1; z-index: ' + this.getContainerZIndex(),
             layout: 'card',
             draggable: {
                 direction: 'horizontal',
